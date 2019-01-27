@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+	{% url 'login' as login_url %}
+	{% url 'register' as register_url %}
+
+	<h1>Forum Posts</h1>
+	<hr/>
+
+	{% if request.user.is_authenticated %}
+
+		<h3>Welcome {{ request.user.username }}</h3>
+
+		<form method='POST'> {% csrf_token %}
+	      {{ form.body }} <br/>
+	      <button type='submit' class='btn btn-default'>Submit</button>
+	    </form>
+
+	{% else %}
+
+		<h4>
+			<a class="btn btn-primary" href="{{ login_url }}" role="button" >Login</a> or <a class="btn btn-secondary" href="{{ register_url }}" role="button" >Register</a> to submit a post.
+		</h4>
+
+	{% endif %}
+	<hr/>
+	<br/>
+
+	{% for post in post_list %}
+
+		{% include 'snippets/post.html' with instance=post %} 
+
+		<br/>
+
+	{% endfor %}
+
+{% endblock %}

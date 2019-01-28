@@ -70,9 +70,9 @@ class RegisterView(View):
 
 		if form.is_valid():
 		    username  = form.cleaned_data.get("username")
-		    # email  = form.cleaned_data.get("email")
+		    email  = form.cleaned_data.get("email")
 		    password  = form.cleaned_data.get("password")
-		    new_user  = User.objects.create_user(username=username, password=password)
+		    new_user  = User.objects.create_user(username=username, email=email, password=password)
 
 		    if new_user is not None:
 		    	login(request, new_user)

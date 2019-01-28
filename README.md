@@ -16,7 +16,6 @@
 4. Run 'python manage.py runserver'.
 5. Open your web browser to the url specified in the terminal.
 
-<b/>
 
 <p>There are some users already created for convenience. Their passwords are all the same as their usernames:</p>
 

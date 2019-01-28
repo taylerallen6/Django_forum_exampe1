@@ -26,7 +26,6 @@
 5. sally.
 6. sue.
 
-<b/>
 
 
 <h2>Forum home once logged in</h2> 

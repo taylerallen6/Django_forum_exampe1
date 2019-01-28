@@ -19,6 +19,7 @@
 <b/>
 
 <p>There are some users already created for convenience. Their passwords are all the same as their usernames:</p>
+
 1. superuser. This user is needed to access the django admin.
 2. billy.
 3. bob.

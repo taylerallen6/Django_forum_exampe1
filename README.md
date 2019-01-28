@@ -5,7 +5,6 @@
 
 <p>A user cannot post without first logging in or creating an account. The menu options also adapt by displaying 'Login' and 'Register' when not logged in and 'Logout' when already logged in.</p>
 
-<b/>
 
 ## Install
 <br/>
